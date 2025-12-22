@@ -396,7 +396,7 @@ async def _download_worker(client, message, url):
                     audio=audio_path,
                     caption=audio_caption,
                     title=os.path.splitext(os.path.basename(audio_path))[0],
-                    performer=f"Powered by @{bot_username}"
+                    performer=f"via @{bot_username}"
                 )
             except Exception:
                 logging.exception("Sending audio failed")
