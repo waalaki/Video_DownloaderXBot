@@ -440,8 +440,7 @@ async def start_next_download():
 async def start(client, message: Message):
     await message.reply("""Welcome 👋
 
-This bot lets you download videos from
-YouTube, TikTok, Instagram, and more.
+This bot downloads videos from YouTube
 
 👉 Just send the video link""")
 
