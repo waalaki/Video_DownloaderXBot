@@ -461,7 +461,7 @@ async def start_next_download():
 async def start(client, message: Message):
     await message.reply("""Welcome 👋
 
-This bot downloads videos from YouTube
+This bot downloads videos from YouTube Shorts
 
 👉 Just send the video link""")
 
