@@ -463,6 +463,8 @@ async def start(client, message: Message):
 
 This bot downloads videos from YouTube Shorts
 
+ 💎 devloper by @orlaki
+
 👉 Just send the video link""")
 
 @pyro_client.on_message(filters.private & filters.text)
