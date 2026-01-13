@@ -309,7 +309,7 @@ async def download_audio_only(url: str, bot_username: str):
         logging.exception(e)
         return None
 
-async def keep_chat_action(client, chat_id, action=ChatAction.TYPING, interval=4, stop_event=None):
+async def keep_chat_action(client, chat_id, action=ChatAction.UPLOAD_VIDEO, interval=4, stop_event=None):
     if stop_event is None:
         stop_event = asyncio.Event()
     while not stop_event.is_set():
@@ -325,7 +325,7 @@ async def keep_chat_action(client, chat_id, action=ChatAction.TYPING, interval=4
 async def _download_worker(client, message, url):
     bot_username = await get_bot_username(client)
     stop_event = asyncio.Event()
-    typing_task = asyncio.create_task(keep_chat_action(client, message.chat.id, ChatAction.TYPING, 4, stop_event))
+    typing_task = asyncio.create_task(keep_chat_action(client, message.chat.id, ChatAction.UPLOAD_VIDEO, 4, stop_event))
     attempts = 0
     max_attempts = 2
     result = None
